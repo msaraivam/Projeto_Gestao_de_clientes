@@ -83,7 +83,7 @@ void imprimirCliente(Cli);
 
 void gerenciaDeProdutos(Prod*,int*,FILE*);
 Prod cadastrarProduto(Prod, int);
-void listarProdutosCadastrado(Prod*, int);
+void listarProdutosCadastrados(Prod*, int);
 void ordenarProdutoPorNome(Prod*, int);
 void filtrarCategoria();
 void buscarProdutosCadastrado(Prod*, int);
@@ -566,7 +566,7 @@ void gerenciaDeProdutos(Prod *produto,int* contProduto, FILE *arquivo){
             }
             case'L':
             case'l':
-                listarProdutosCadastrado(produto, *contProduto);
+                listarProdutosCadastrados(produto, *contProduto);
             break;
 
             case'B':
@@ -779,7 +779,7 @@ void ordenarProdutoPorNome(Prod *produto,int contProduto){
 
 /*função que busca produto cadastrado*/
 
-void buscarProdutoCadastrado(Prod *produto,int contProduto){
+void buscarProdutosCadastrado(Prod *produto,int contProduto){
 
 int i , marcador = 0;
 int codigoProduto;
@@ -823,7 +823,7 @@ void imprimirProduto(Prod produto){
 }
 
 /*função que atualiza um produto já cadastrado */
-void atualizarProdutoCadastrado(Prod *produto, int contProduto){
+void atualizarProdutosCadastrado(Prod *produto, int contProduto){
 Prod aux;
 int  i, marcador = 0;
 
@@ -941,7 +941,7 @@ void gerenciaDePedidos(Ped *pedido, Cli *cliente, Prod *produto, int *contPedido
 }
 
 /*função que gerencia açoes relacionadas a pedidos */
-void CadastrarPedido(Ped *pedido, Cli *cliente, Prod *produto, int *contPedido, int contCliente, int contProduto){
+void cadastrarPedido(Ped *pedido, Cli *cliente, Prod *produto, int *contPedido, int contCliente, int contProduto){
 
     char nomeCliente[30];
     int codigoCliente, marcador = 0;
@@ -1154,7 +1154,7 @@ printf("\n=====================================\n");
 }
 
 /*Codigo da função que lista todos os pedidos feitos em um dia */
-void listarPedidoDeUmDia(Ped *pedido, int contPedido){
+void ListarPedidosDeUmDia(Ped *pedido, int contPedido){
 int i, dia,mes,ano,marcador=0;
 char d[3];
 char m[3];
